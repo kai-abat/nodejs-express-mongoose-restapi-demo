@@ -1,2 +1,50 @@
 
-GET http://localhost:3000
+GET http://localhost:3000/
+
+
+###
+
+GET http://localhost:3000/product
+
+###
+GET http://localhost:3000/product/66991641e310ad4a3668827c
+
+###
+
+POST  http://localhost:3000/product HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "soap",
+  "quantity": 1,
+  "price": 100,
+  "image": "https://images.pexels.com/photos/773252/pexels-photo-773252.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+}
+
+###
+
+POST  http://localhost:3000/product HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "wine",
+  "quantity": 10,
+  "price": 300,
+  "image": "https://images.pexels.com/photos/773252/pexels-photo-773252.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+}
+
+###
+PUT  http://localhost:3000/product/66991641e310ad4a3668827c
+Content-Type: application/json 
+
+{
+  "name": "hand soap 013"
+}
+
+###
+PATCH   http://localhost:3000/product/66991641e310ad4a3668827c
+Content-Type: application/json 
+
+{
+  "name": "hand soap 03"
+}
